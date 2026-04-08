@@ -275,3 +275,26 @@
         @endif
     </body>
 </html>
+// Get all chirps
+Chirp::all();
+ 
+// Get chirp by ID
+Chirp::find(1);
+ 
+// Get first chirp matching criteria
+Chirp::where('message', 'like', '%Laravel%')->first();
+ 
+// Count chirps
+Chirp::count();
+ 
+// Get a user's chirps
+$user->chirps;
+ 
+// Create a chirp
+$user->chirps()->create(['message' => 'Hello!']);
+ 
+// Update a chirp
+$chirp->update(['message' => 'Updated message']);
+ 
+// Delete a chirp
+$chirp->delete();
